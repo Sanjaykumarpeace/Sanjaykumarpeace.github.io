@@ -1,8 +1,21 @@
+/* Add CSS Variables */
+:root {
+  --bg: #0f172a;
+  --text: white;
+  --card: rgba(255,255,255,0.05);
+}
+
+.light-theme {
+  --bg: #fdf6e3;
+  --text: #222;
+  --card: rgba(0,0,0,0.05);
+}
+/*body*/
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: white;
+  background: var(--bg);
+  color: var(--text);
 }
 
 /* Navbar */
@@ -26,14 +39,23 @@ nav a {
 nav a:hover {
   color: #00c6ff;
 }
+/* Ligh theme--CREAM STYLE*/
+.light-theme {
+  --bg: #fdf6e3;
+  --text: #222;
+  --card: #ffffff;
+}
 
 /* Hero */
 .hero {
   text-align: center;
-  padding: 60px 20px;
-  min-height: 60vh;
-  background: linear-gradient(to right, #007bff, #00c6ff);
-  color: white;
+  padding: 80px 20px;
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /*add glow effect*/
 .glow {
@@ -45,7 +67,32 @@ nav a:hover {
   color: #94a3b8;
   margin-top: 10px;
 }
+/* ANIMATED bground*/
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,0,0,0.2), transparent),
+              radial-gradient(circle, rgba(0,0,255,0.2), transparent);
+  animation: moveFog 10s infinite alternate;
+  z-index: -1;
+}
+@keyframes moveFog {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-50px, -50px); }
+}
 
+/* cursor glow*/
+body::after {
+  content: "";
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(0,200,255,0.3), transparent);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
 /* Sections */
 section {
   padding: 60px 20px;
@@ -53,15 +100,27 @@ section {
   margin: auto;
 }
 
+/*Add gradient section background8*/
+#projects {
+  background: rgba(255,255,255,0.02);
+  border-radius: 20px;
+  padding: 30px;
+}
+/*Add heading styling */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
 /* Cards */
 .card {
-  background: rgba(255, 255, 255, 0.05);
   padding: 20px;
   margin: 20px 0;
   border-radius: 15px;
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.1);
   transition: 0.3s;
+  background: var(--card);
 }
 /*card hover*/
 .card:hover {
