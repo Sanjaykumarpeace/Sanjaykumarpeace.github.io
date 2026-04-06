@@ -11,6 +11,7 @@
 <!-- Navbar -->
 <header>
   <h1>Sanjay</h1>
+  <button id="themeToggle">🌙</button>
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -22,14 +23,9 @@
 <!-- Hero Section -->
 <section class="hero">
   <h2 class="glow">Hi, I'm Sanjay 👋</h2>
-  <p class="subtitle">Aspiring Developer • Cloud & AI Enthusiast</p>
+  <p class="subtitle">Aspiring Developer | Cloud & AI Enthusiast</p>
 
-  <!-- NEW BUTTON -->
   <a href="#projects" class="btn">View My Work</a>
-  <p>
-    I am a student passionate about cloud computing, web development,
-    and building real-world projects.
-  </p>
 </section>
 
 <!-- Projects -->
@@ -67,6 +63,12 @@
 <footer>
   <p>© 2026 Sanjay</p>
 </footer>
+<script>
+  const btn = document.getElementById("themeToggle");
 
+  btn.onclick = () => {
+    document.body.classList.toggle("light-theme");
+  };
+</script>
 </body>
 </html>
