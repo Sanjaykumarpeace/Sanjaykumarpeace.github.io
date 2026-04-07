@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Sanjay | Portfolio</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow"></div>
 
 <!-- Navbar -->
 <header>
@@ -20,11 +28,10 @@
   </nav>
 </header>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="hero">
   <h2 class="glow">Hi, I'm Sanjay 👋</h2>
   <p class="subtitle">Aspiring Developer | Cloud & AI Enthusiast</p>
-
   <a href="#projects" class="btn">View My Work</a>
 </section>
 
@@ -32,16 +39,27 @@
 <section id="projects">
   <h2>Projects</h2>
 
-  <div class="card">
-    <h3>AI Study Planner</h3>
-    <p>Generates smart study schedules using AI.</p>
-  </div>
+  <div class="project-grid">
 
-  <div class="card">
-    <h3>Portfolio Website</h3>
-    <p>Personal website hosted using GitHub Pages.</p>
-  </div>
+    <div class="project-card">
+      <h3>AI Study Planner</h3>
+      <p>Generates smart schedules using AI.</p>
+      <a href="#">View Project →</a>
+    </div>
 
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Modern portfolio with animations.</p>
+      <a href="#">View Project →</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Business Website</h3>
+      <p>Helps local businesses go online.</p>
+      <a href="#">View Project →</a>
+    </div>
+
+  </div>
 </section>
 
 <!-- Skills -->
@@ -60,15 +78,41 @@
   <p>Email: peacebillioner@gmail.com</p>
 </section>
 
+<!-- Footer -->
 <footer>
   <p>© 2026 Sanjay</p>
 </footer>
-<script>
-  const btn = document.getElementById("themeToggle");
 
-  btn.onclick = () => {
-    document.body.classList.toggle("light-theme");
-  };
+<!-- JS -->
+<script>
+/* Theme Toggle */
+const btn = document.getElementById("themeToggle");
+
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light-theme");
+  btn.textContent = "☀️";
+}
+
+btn.onclick = () => {
+  document.body.classList.toggle("light-theme");
+
+  if (document.body.classList.contains("light-theme")) {
+    localStorage.setItem("theme", "light");
+    btn.textContent = "☀️";
+  } else {
+    localStorage.setItem("theme", "dark");
+    btn.textContent = "🌙";
+  }
+};
+
+/* Cursor Glow */
+const cursor = document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
 </script>
+
 </body>
 </html>
