@@ -2,90 +2,479 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sanjay | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K Sanjay Kumar — Cloud & AI Developer</title>
+  <meta name="description" content="K Sanjay Kumar — BSc Cloud Computing student at Reva University, Bangalore. Building AI-powered applications: Green Corridor emergency routing, JARVIS AI assistant, and more.">
+  <meta property="og:title" content="K Sanjay Kumar — Cloud & AI Developer">
+  <meta property="og:description" content="Building AI-powered systems that solve real problems.">
+  <meta property="og:url" content="https://sanjaypeace.me">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="K Sanjay Kumar — Cloud & AI Developer">
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- Cursor Glow -->
-<div class="cursor-glow"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
 
-<!-- Navbar -->
-<header>
-  <h1>Sanjay</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-    <button id="themeToggle">🌙</button>
-  </nav>
+<!-- ===================== NAVBAR ===================== -->
+<header id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">SK</a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="https://github.com/Sanjaykumarpeace" target="_blank" rel="noopener noreferrer"
+         class="icon-link" aria-label="GitHub profile">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+      </a>
+      <!-- UPDATE: Replace the href below with your actual LinkedIn profile URL -->
+      <a href="https://www.linkedin.com/in/sanjaypeace" target="_blank" rel="noopener noreferrer"
+         class="icon-link" aria-label="LinkedIn profile">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+      <button id="themeToggle" aria-label="Toggle colour theme">🌙</button>
+    </div>
+  </div>
 </header>
 
-<!-- Hero -->
-<section class="hero">
-  <h2 class="glow">Hi, I'm Sanjay 👋</h2>
-  <p class="subtitle">Aspiring Developer | Cloud & AI Enthusiast</p>
-  <a href="#projects" class="btn">View My Work</a>
-</section>
-
-<!-- Projects -->
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="project-grid">
-
-    <div class="project-card">
-      <h3>AI Study Planner</h3>
-      <p>Generates smart schedules using AI.</p>
-      <a href="#">View Project →</a>
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="hero-badge" data-animate>BSc Cloud Computing · Reva University · Bangalore</span>
+    <h1 class="hero-name" data-animate>K Sanjay Kumar</h1>
+    <p class="hero-tagline" data-animate>
+      I build <span class="accent">AI-powered systems</span><br>that solve real problems.
+    </p>
+    <p class="hero-desc" data-animate>
+      From emergency traffic routing to voice-powered AI assistants —
+      turning ideas into fully deployed, working software.
+    </p>
+    <div class="hero-actions" data-animate>
+      <a href="#projects" class="btn btn-primary">View My Projects</a>
+      <a href="Resume-Sanjay-edited.pdf" download class="btn btn-outline">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download Resume
+      </a>
     </div>
-
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>Modern portfolio with animations.</p>
-      <a href="#">View Project →</a>
+    <div class="hero-meta" data-animate>
+      <span>📍 Bengaluru, India</span>
+      <span>🎓 CGPA: 8.45</span>
+      <span>🚀 Open to Internships</span>
     </div>
+  </div>
 
-    <div class="project-card">
-      <h3>Business Website</h3>
-      <p>Helps local businesses go online.</p>
-      <a href="#">View Project →</a>
+  <div class="hero-visual" data-animate aria-hidden="true">
+    <div class="code-card">
+      <div class="code-header">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="code-filename">sanjay.json</span>
+      </div>
+      <pre class="code-body"><code><span class="c-key">"name"</span>: <span class="c-str">"K Sanjay Kumar"</span>,
+<span class="c-key">"role"</span>: <span class="c-str">"Cloud & AI Developer"</span>,
+<span class="c-key">"university"</span>: <span class="c-str">"Reva University"</span>,
+<span class="c-key">"cgpa"</span>: <span class="c-num">8.45</span>,
+<span class="c-key">"focus"</span>: [
+  <span class="c-str">"AI Applications"</span>,
+  <span class="c-str">"Cloud Architecture"</span>,
+  <span class="c-str">"Backend Systems"</span>
+],
+<span class="c-key">"status"</span>: <span class="c-str">"Open to Internships ✓"</span></code></pre>
     </div>
-
   </div>
 </section>
 
-<!-- Skills -->
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="container">
+    <span class="section-badge" data-animate>About</span>
+    <h2 class="section-title" data-animate>Who I Am</h2>
+
+    <div class="about-grid">
+      <div class="about-text" data-animate>
+        <p>
+          I'm a <strong>BSc CS in Cloud Computing & Big Data</strong> student at Reva University,
+          Bangalore (2024–2027), maintaining a CGPA of 8.45.
+        </p>
+        <p>
+          I build AI-powered applications that solve real-world problems — from an emergency
+          traffic routing system that clears paths for ambulances in real time, to a
+          voice-enabled AI assistant that helps students learn smarter using local LLMs.
+        </p>
+        <p>
+          I actively participate in hackathons, explore cloud architectures, and ship
+          full-stack projects from idea to deployment. I speak English, Tamil, and Hindi.
+        </p>
+        <div class="about-links">
+          <a href="https://github.com/Sanjaykumarpeace" target="_blank" rel="noopener" class="about-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            github.com/Sanjaykumarpeace
+          </a>
+          <a href="mailto:ksanjaykumar.cloud@gmail.com" class="about-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,12 2,6"/>
+            </svg>
+            ksanjaykumar.cloud@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="stats-grid" data-animate>
+        <div class="stat-card">
+          <div class="stat-num">8.45</div>
+          <div class="stat-label">CGPA</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Projects Deployed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">7+</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">2026</div>
+          <div class="stat-label">Available From</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects">
+  <div class="container">
+    <span class="section-badge" data-animate>Work</span>
+    <h2 class="section-title" data-animate>Things I've Built</h2>
+
+    <div class="project-grid">
+
+      <!-- Project 1: Green Corridor (featured — has live demo!) -->
+      <div class="project-card featured" data-animate>
+        <div class="project-header">
+          <div class="project-icon" aria-hidden="true">🚑</div>
+          <div class="project-links">
+            <a href="https://green-corridor-942de.web.app" target="_blank" rel="noopener"
+               class="project-link project-link-live">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                <polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              Live Demo
+            </a>
+            <a href="https://github.com/Sanjaykumarpeace/green-corridor-emergency-system"
+               target="_blank" rel="noopener" class="project-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <span class="featured-badge">⭐ Featured Project</span>
+        <h3>Green Corridor</h3>
+        <p class="project-subtitle">AI-Based Emergency Traffic Clearance System</p>
+        <p class="project-desc">
+          Built an AI-driven system that optimises ambulance routes in real time.
+          Predicts a 1 km signal clearance zone with dynamic traffic signal control
+          and a live simulation dashboard with real-time alerts — fully deployed and accessible on the web.
+        </p>
+        <div class="tech-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">AI Routing</span>
+          <span class="tag">Firebase</span>
+        </div>
+      </div>
+
+      <!-- Project 2: JARVIS AI -->
+      <div class="project-card" data-animate>
+        <div class="project-header">
+          <div class="project-icon" aria-hidden="true">🤖</div>
+          <div class="project-links">
+            <a href="https://github.com/Sanjaykumarpeace/jarvis-ai-student-assistant"
+               target="_blank" rel="noopener" class="project-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <h3>JARVIS AI Assistant</h3>
+        <p class="project-subtitle">Offline AI-Powered Student Study Tool</p>
+        <p class="project-desc">
+          Academic AI assistant with voice interaction (Whisper + gTTS), PDF question
+          answering via RAG, quiz generation, and study planning — all powered by a
+          local LLaMA3 model with zero API dependency or cost.
+        </p>
+        <div class="tech-tags">
+          <span class="tag">Python</span>
+          <span class="tag">LLaMA3</span>
+          <span class="tag">Whisper</span>
+          <span class="tag">RAG</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">Flask</span>
+        </div>
+      </div>
+
+      <!-- Project 3: Business Website -->
+      <div class="project-card" data-animate>
+        <div class="project-header">
+          <div class="project-icon" aria-hidden="true">🌐</div>
+          <div class="project-links"></div>
+        </div>
+        <h3>Business Website</h3>
+        <p class="project-subtitle">Web Presence for Local Businesses</p>
+        <p class="project-desc">
+          Designed and deployed responsive websites that help local businesses establish
+          their online presence — mobile-first, fast-loading, and tailored to each
+          client's brand and audience.
+        </p>
+        <div class="tech-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Responsive Design</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
 <section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML, CSS</li>
-    <li>Python</li>
-    <li>Cloud Basics</li>
-  </ul>
+  <div class="container">
+    <span class="section-badge" data-animate>Expertise</span>
+    <h2 class="section-title" data-animate>Tech Stack</h2>
+
+    <div class="skills-grid">
+      <div class="skills-group" data-animate>
+        <h4 class="skills-group-title">Languages</h4>
+        <div class="skill-chips">
+          <span class="chip">Python</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">HTML & CSS</span>
+          <span class="chip">SQL</span>
+          <span class="chip">C (Basics)</span>
+        </div>
+      </div>
+
+      <div class="skills-group" data-animate>
+        <h4 class="skills-group-title">Cloud & DevOps</h4>
+        <div class="skill-chips">
+          <span class="chip">AWS EC2</span>
+          <span class="chip">AWS S3</span>
+          <span class="chip">AWS IAM</span>
+          <span class="chip">AWS Lambda</span>
+          <span class="chip">Firebase</span>
+          <span class="chip">Linux</span>
+        </div>
+      </div>
+
+      <div class="skills-group" data-animate>
+        <h4 class="skills-group-title">AI & Machine Learning</h4>
+        <div class="skill-chips">
+          <span class="chip">Prompt Engineering</span>
+          <span class="chip">LLaMA3 / Ollama</span>
+          <span class="chip">RAG</span>
+          <span class="chip">Whisper STT</span>
+          <span class="chip">gTTS</span>
+          <span class="chip">PyPDF</span>
+        </div>
+      </div>
+
+      <div class="skills-group" data-animate>
+        <h4 class="skills-group-title">Frameworks & Tools</h4>
+        <div class="skill-chips">
+          <span class="chip">Flask</span>
+          <span class="chip">Streamlit</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">Git</span>
+          <span class="chip">DBMS</span>
+          <span class="chip">VS Code</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Contact -->
+<!-- ===================== CERTIFICATIONS ===================== -->
+<section id="certifications">
+  <div class="container">
+    <span class="section-badge" data-animate>Credentials</span>
+    <h2 class="section-title" data-animate>Certifications</h2>
+
+    <div class="cert-grid">
+      <div class="cert-card" data-animate>
+        <div class="cert-icon" aria-hidden="true">☁️</div>
+        <div class="cert-body">
+          <div class="cert-name">AWS AI Practitioner Challenge</div>
+          <div class="cert-issuer">Udacity</div>
+        </div>
+      </div>
+      <div class="cert-card" data-animate>
+        <div class="cert-icon" aria-hidden="true">🔐</div>
+        <div class="cert-body">
+          <div class="cert-name">CCST Cybersecurity</div>
+          <div class="cert-issuer">Cisco</div>
+        </div>
+      </div>
+      <div class="cert-card" data-animate>
+        <div class="cert-icon" aria-hidden="true">🧠</div>
+        <div class="cert-body">
+          <div class="cert-name">Introduction to Generative AI</div>
+          <div class="cert-issuer">Coursera</div>
+        </div>
+      </div>
+      <div class="cert-card" data-animate>
+        <div class="cert-icon" aria-hidden="true">🐧</div>
+        <div class="cert-body">
+          <div class="cert-name">Linux Fundamentals</div>
+          <div class="cert-issuer">Ethical Byte</div>
+        </div>
+      </div>
+      <div class="cert-card" data-animate>
+        <div class="cert-icon" aria-hidden="true">🌩️</div>
+        <div class="cert-body">
+          <div class="cert-name">Introduction to Cloud Computing</div>
+          <div class="cert-issuer">Infosys Springboard</div>
+        </div>
+      </div>
+      <div class="cert-card" data-animate>
+        <div class="cert-icon" aria-hidden="true">📊</div>
+        <div class="cert-body">
+          <div class="cert-name">Introduction to Business Intelligence</div>
+          <div class="cert-issuer">Infosys Springboard</div>
+        </div>
+      </div>
+      <div class="cert-card" data-animate>
+        <div class="cert-icon" aria-hidden="true">💬</div>
+        <div class="cert-body">
+          <div class="cert-name">Prompt Engineering</div>
+          <div class="cert-issuer">Infosys Springboard</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education">
+  <div class="container">
+    <span class="section-badge" data-animate>Background</span>
+    <h2 class="section-title" data-animate>Education</h2>
+
+    <div class="edu-timeline">
+      <div class="edu-item" data-animate>
+        <div class="edu-dot"></div>
+        <div class="edu-content">
+          <div class="edu-year">2024 – 2027</div>
+          <h3 class="edu-degree">BSc CS in Cloud Computing & Big Data</h3>
+          <div class="edu-school">Reva University, Bangalore</div>
+          <div class="edu-meta">SGPA: 8.44 &nbsp;·&nbsp; CGPA: 8.45</div>
+        </div>
+      </div>
+      <div class="edu-item" data-animate>
+        <div class="edu-dot"></div>
+        <div class="edu-content">
+          <div class="edu-year">2022 – 2023</div>
+          <h3 class="edu-degree">Higher Secondary (12th) — 75%</h3>
+          <div class="edu-school">Vidhyalakshmi Senior Sec. School, Vellore</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: peacebillioner@gmail.com</p>
+  <div class="container">
+    <span class="section-badge" data-animate>Get in Touch</span>
+    <h2 class="section-title" data-animate>Contact Me</h2>
+
+    <div class="contact-wrap" data-animate>
+      <p class="contact-intro">
+        I'm actively looking for internship opportunities and collaborations in Cloud, AI, and
+        backend development. Whether you have a project in mind, want to work together, or just
+        want to say hello — my inbox is open.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:ksanjaykumar.cloud@gmail.com" class="contact-btn primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,12 2,6"/>
+          </svg>
+          ksanjaykumar.cloud@gmail.com
+        </a>
+        <a href="https://github.com/Sanjaykumarpeace" target="_blank" rel="noopener" class="contact-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          GitHub
+        </a>
+        <!-- UPDATE: Replace href with your actual LinkedIn URL -->
+        <a href="www.linkedin.com/in/sanjaypeace" target="_blank" rel="noopener" class="contact-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="tel:+919791594596" class="contact-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.08 1.22a2 2 0 012-2.18H5.1a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 6.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          +91-9791594596
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Footer -->
+<!-- ===================== FOOTER ===================== -->
 <footer>
-  <p>© 2026 Sanjay</p>
+  <div class="container footer-container">
+    <div class="footer-inner">
+      <p>© 2026 K Sanjay Kumar &nbsp;·&nbsp; Built with passion from Bengaluru 🇮🇳</p>
+      <div class="footer-links">
+        <a href="https://github.com/Sanjaykumarpeace" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sanjaypeace" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:ksanjaykumar.cloud@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<!-- JS -->
+<!-- ===================== JAVASCRIPT ===================== -->
 <script>
-/* Theme Toggle */
+/* ----- Theme Toggle ----- */
 const btn = document.getElementById("themeToggle");
 
 if (localStorage.getItem("theme") === "light") {
@@ -95,23 +484,34 @@ if (localStorage.getItem("theme") === "light") {
 
 btn.onclick = () => {
   document.body.classList.toggle("light-theme");
-
-  if (document.body.classList.contains("light-theme")) {
-    localStorage.setItem("theme", "light");
-    btn.textContent = "☀️";
-  } else {
-    localStorage.setItem("theme", "dark");
-    btn.textContent = "🌙";
-  }
+  const isLight = document.body.classList.contains("light-theme");
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+  btn.textContent = isLight ? "☀️" : "🌙";
 };
 
-/* Cursor Glow */
+/* ----- Cursor Glow ----- */
 const cursor = document.querySelector(".cursor-glow");
-
 document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+  cursor.style.top  = e.clientY + "px";
 });
+
+/* ----- Scroll-triggered animations ----- */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll("[data-animate]").forEach(el => observer.observe(el));
+
+/* ----- Navbar scroll style ----- */
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 60);
+}, { passive: true });
 </script>
 
 </body>
